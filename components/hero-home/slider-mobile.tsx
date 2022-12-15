@@ -10,15 +10,27 @@ export default function SliderMobile() {
   const random = (min: any, max: any) =>
     Math.floor(Math.random() * (max - min)) + min;
 
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    // clean up code
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  console.log(offset);
+
   return (
     <article className=" mx-[-20px] overflow-hidden">
       <div
         className={styles.tag__list}
-        // style={{ transform: `translateX(${"-10px"})` }}
+        style={{ transform: `translateX(${offset})` }}
       >
         <InfiniteLoopSlider
           duration={{
-            "--duration": `${random(DURATION - 5000, DURATION + 5000)}ms`,
+            "--duration": `${"100000"}ms`,
           }}
         >
           {/* {numbersCopy.map((tag, index) => (
