@@ -10,7 +10,7 @@ export default function HeroHome() {
   console.log(width > 769);
 
   return (
-    <section className="container relative grid grid-cols-2 gap-3">
+    <section className="container relative flex flex-col justify-center md:justify-start md:grid md:grid-cols-2 gap-3 h-screen md:h-auto">
       {width > 769 ? (
         <>
           <TextHero />
@@ -18,7 +18,6 @@ export default function HeroHome() {
         </>
       ) : (
         <>
-        <h1 className="text-white">mobile</h1>
           <TextHero />
           <SliderMobile />
         </>
