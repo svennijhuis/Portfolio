@@ -14,7 +14,7 @@ export default function SliderMobile() {
     <article className=" mx-[-20px] overflow-hidden">
       <div
         className={styles.tag__list}
-        style={{ transform: `translateX(${"-10px"})` }}
+        // style={{ transform: `translateX(${"-10px"})` }}
       >
         <InfiniteLoopSlider
           duration={{
