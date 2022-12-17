@@ -1,10 +1,22 @@
 .h1 {
   span {
-    background: linear-gradient(92deg, #002fd3 0%, #00e0ff 77%);
+    // background: linear-gradient(92deg, #002fd3 0%, #00e0ff 77%);
+    background: linear-gradient(90deg, #007de7, #00e0ff, #f441a5, #03a9f4);
+    background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
     background-attachment: fixed;
+    animation: animate 8s linear infinite;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
   }
 }

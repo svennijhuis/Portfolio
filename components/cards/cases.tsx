@@ -11,8 +11,12 @@ export default function CardCases() {
         width={500}
         height={200}
       />
-      <h3 className="text-18 leading-28 md:text-30 md:leading-30 font-normal text-black">sdaf</h3>
-      <h3 className="text-25 leading-35 md:text-40 md:leading-50 font-medium text-black">asfd</h3>
+      <h3 className="text-18 leading-28 md:text-30 md:leading-30 font-normal text-black">
+        sdaf
+      </h3>
+      <h3 className="text-25 leading-35 md:text-40 md:leading-50 font-medium text-black md:w-[90%]">
+        Website gemaakt met dynamische blokken
+      </h3>
     </article>
   );
 }

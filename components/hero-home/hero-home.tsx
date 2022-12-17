@@ -10,7 +10,7 @@ export default function HeroHome() {
   console.log(width > 769);
 
   return (
-    <section className="container relative flex flex-col justify-center md:justify-start md:grid md:grid-cols-2 gap-3 h-[80vh] md:h-auto">
+    <section className="container relative flex flex-col justify-center md:justify-start md:grid md:grid-cols-2 gap-3 h-screen md:h-auto">
       {width > 769 ? (
         <>
           <TextHero />

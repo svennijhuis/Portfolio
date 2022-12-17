@@ -7,7 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export default function TextHero() {
   return (
     <article className="md:sticky md:top-0 md:h-[100vh] flex flex-col justify-center md:col-span-1  h-auto">
-      <h1 className={`text-60 leading-60 md:text-70 md:leading-60 font-bold text-white md:w-[90%] ${styles.h1} ${inter.className}`}>
+      <h1
+        className={`text-60 leading-60 md:text-70 md:leading-60 font-bold text-white md:w-[90%] ${styles.h1} ${inter.className}`}
+      >
         Hi. i’m <span>Sven</span> developer.
       </h1>
       <h2 className="mb-3 text-16 leading-26 md:text-20 md:leading-30 text-white mt-[5px]">
