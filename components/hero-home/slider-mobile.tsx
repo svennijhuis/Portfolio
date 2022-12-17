@@ -23,7 +23,7 @@ export default function SliderMobile() {
   console.log(offset);
 
   return (
-    <article className=" mx-[-20px] overflow-hidden pt-5">
+    <article className=" mx-[-20px] overflow-hidden">
       <div
         className={styles.tag__list}
         style={{ transform: `translateX(${offset})` }}
