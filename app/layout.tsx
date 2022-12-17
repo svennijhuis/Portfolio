@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import { Quicksand } from "@next/font/google";
 const inter = Quicksand({ subsets: ["latin"] });
 export default function RootLayout({
