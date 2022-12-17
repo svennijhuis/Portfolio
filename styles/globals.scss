@@ -104,3 +104,10 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.gradient-text {
+  background: linear-gradient(180deg, #007de7, #00e0ff, #f441a5, #03a9f4);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
