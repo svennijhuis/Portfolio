@@ -20,8 +20,6 @@ export default function SliderMobile() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  console.log(offset);
-
   return (
     <article className=" mx-[-20px] overflow-hidden">
       <div

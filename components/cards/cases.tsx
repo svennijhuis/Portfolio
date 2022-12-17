@@ -3,7 +3,7 @@ import styles from "./cases.module.scss";
 
 export default function CardCases() {
   return (
-    <article className="border-black border-b-[1px] last-of-type:border-0 py-5 last-of-type:pb-0 md:last-of-type:pb-5 md:first-of-type:pt-12 relative">
+    <article className="border-black border-b-[1px] last-of-type:border-0 py-5 last-of-type:pb-0 md:last-of-type:pb-12 md:first-of-type:pt-12 relative">
       <Image
         className={`md:absolute md:opacity-0 md:hover:opacity-100 ${styles.img_hover}`}
         src=""
