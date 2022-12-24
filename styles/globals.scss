@@ -111,3 +111,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.overlay-img {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.42),
+    transparent 50%,
+    transparent
+  );
+}

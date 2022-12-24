@@ -6,7 +6,8 @@ export default function Cases() {
     <>
       <section className="bg-white">
         <div className="container grid grid-cols-2 py-10 md:py-0">
-          <SectionSubtitle title="Projects" />
+          <SectionSubtitle title="Projects">
+          </SectionSubtitle>
           <SectionCases />
         </div>
       </section>
