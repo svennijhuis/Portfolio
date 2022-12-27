@@ -1,6 +1,8 @@
 import { Button } from "@ui/button";
 import styles from "./hero-home.module.scss";
 
+import Link from "next/link";
+
 import { Inter } from "@next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +17,10 @@ export default function TextHero() {
       <h2 className="mb-3 text-16 leading-26 md:text-20 md:leading-30 text-white mt-[5px]">
         Front End Developer / WordPress Expert
       </h2>
-      <div className="flex flex-row flex-wrap gap-1 md:gap-3">
+      <div className="md:flex flex-row flex-wrap gap-1 md:gap-3 hidden ">
         <Button intent="secondary">Dit is een test</Button>
         <Button intent="primary">Dit is een test</Button>
+        <Link href=""></Link>
       </div>
     </article>
   );

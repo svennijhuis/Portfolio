@@ -1,44 +1,32 @@
+"use client";
 import { InfiniteLoopSlider } from "../hero-home/slider/InfiniteLoopSlider";
-// import { Tag } from "../hero-home/slider/tag";
 import styles from "../hero-home/slider/style.module.scss";
 import CardHero from "./card-hero";
 
-import { useEffect, useState } from "react";
+import { Parallax } from "react-scroll-parallax";
+import SectionParallax from "./section-parallax";
 
 export default function SliderMobile() {
-  const DURATION = 100000;
-  const random = (min: any, max: any) =>
-    Math.floor(Math.random() * (max - min)) + min;
-
-  const [offset, setOffset] = useState(0);
-
-  useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-    // clean up code
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <article className=" mx-[-20px] overflow-hidden">
-      <div
-        className={styles.tag__list}
-        style={{ transform: `translateX(${offset})` }}
-      >
-        <InfiniteLoopSlider
-          duration={{
-            "--duration": `${"100000"}ms`,
-          }}
-        >
-          {/* {numbersCopy.map((tag, index) => (
+    <SectionParallax>
+      <article className=" mx-[-20px] overflow-hidden">
+        <Parallax translateX={[-200, 20]} easing="easeOutQuad">
+          <div className={styles.tag__list}>
+            <InfiniteLoopSlider
+              duration={{
+                "--duration": `${"0"}ms`,
+              }}
+            >
+              {/* {numbersCopy.map((tag, index) => (
           <Tag text={tag} key={index} />
         ))} */}
-          {Array.from({ length: 10 }).map((_, index) => (
-            <CardHero key={index + 1} />
-          ))}
-        </InfiniteLoopSlider>
-      </div>
-    </article>
+              {Array.from({ length: 10 }).map((_, index) => (
+                <CardHero key={index + 1} />
+              ))}
+            </InfiniteLoopSlider>
+          </div>
+        </Parallax>
+      </article>
+    </SectionParallax>
   );
 }
