@@ -8,11 +8,34 @@
 //   }
 // }
 
-
 .block_hover {
-    h3 {
-        &:nth-of-type(2) {
-            
-        }
+  h3 {
+    position: relative;
+    &:nth-of-type(2) {
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 0.5px;
+        bottom: -10px;
+        left: 0;
+        background-color: #6a6a6a;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
     }
+  }
+
+  &:hover {
+    h3 {
+      &:nth-of-type(2) {
+        &::after {
+          content: "";
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
 }
